@@ -1,0 +1,51 @@
+[
+  {
+    "latitude": 48.14077213660918,
+    "longitude": 11.55692171014209,
+    "name": "Hbf",
+    "description": "central station",
+    "open": "24/7",
+    "needs": [
+      {
+        "id": 1,
+        "name": "UA/RU Infopoint",
+        "description": "Ukranian/Russian speaking people",
+        "rating": 10
+      },
+      {
+        "id": 3,
+        "name": "Shoes 30 - 35",
+        "description": "Any type of shoes size 30 - 35",
+        "rating": 2
+      },
+      {
+        "id": 11,
+        "name": "Warm meal",
+        "description": "Some warm meal at least once a day",
+        "rating": 16
+      }
+    ]
+  },
+  {
+    "latitude": 48.14145550585138,
+    "longitude": 11.562230991935367,
+    "name": "Hbf",
+    "address": "Elisenstraße 3, 80335 München",
+    "description": "Munchen freiwillige",
+    "open": "Mo - Fr, 8:00 - 16:00",
+    "needs": [
+      {
+        "id": 1,
+        "name": "UA/RU Infopoint",
+        "description": "Ukranian/Russian speaking people",
+        "rating": 22
+      },
+      {
+        "id": 11,
+        "name": "Warm meal",
+        "description": "Some warm meal at least once a day",
+        "rating": 4
+      }
+    ]
+  }
+]
