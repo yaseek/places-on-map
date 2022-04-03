@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getPoints } from '../service';
-import { TPoint } from '../types';
+import { getPoints } from './service';
+import { TPoint } from './types';
 import style from './app.module.scss';
-import Map from './Map';
+import Map from './components/Map';
 
 const App = () => {
   const [points, setPoints] = useState<TPoint[]>([]);
@@ -13,7 +13,13 @@ const App = () => {
 
   return (
     <div className={style.app}>
-      <Map {...{ points }} />
+      <h1>Example of the map</h1>
+      <hr />
+      <div style={{ height: 500, padding: 24 }}>
+        <Map {...{ points }} />
+      </div>
+      <hr />
+      <p>Some kind of text.</p>
     </div>
   );
 }

@@ -1,10 +1,26 @@
 .map {
-  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
   background: silver;
+  z-index: 0;
 }
 
 .marker {
   display: inline-block;
   border-radius: 50%;
   background-color: red;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fullScreenButton {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  font-size: large;
 }
