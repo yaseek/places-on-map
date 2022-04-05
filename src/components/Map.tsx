@@ -14,7 +14,14 @@ const Map = ({ points }: { points: TPoint[] }) => {
   const markerIcon = useMemo(() => L.divIcon({ className: style.marker }), []);
 
   const enterFullScreenMode = useCallback<MouseEventHandler>(() => {
-    mapRef.current?.requestFullscreen();
+    if (!document.fullscreenElement && mapRef?.current) {
+      const element = mapRef.current;
+      // @ts-ignore
+      const requestMethod = element.requestFullscreen || element.webkitRequestFullscreen || element.mozRequestFullscreen || element.msRequestFullscreen;
+      if (requestMethod) {
+        requestMethod.apply(element);
+      }
+    }
   }, []);
 
   useLayoutEffect(() => {
@@ -28,7 +35,7 @@ const Map = ({ points }: { points: TPoint[] }) => {
     if (!map) {
       return;
     }
-    console.log('MMM', mapRef.current);
+
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
